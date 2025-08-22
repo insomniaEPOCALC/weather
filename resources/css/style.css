@@ -3,9 +3,13 @@
     font-family: iroha-extralight;
     src:url("../fonts/irohakakuC-ExtraLight.ttf")format("truetype");
 }
+@font-face{
+    font-family: iroha-light;
+    src:url("../fonts/irohakakuC-Light.ttf")format("truetype");
+}
 
 .block{
     display: grid;
     gap: 64px;
-    font-family: iroha-extralight;
+    font-family: iroha-extralight, iroha-light;
 }
