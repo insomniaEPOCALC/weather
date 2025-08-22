@@ -40,4 +40,10 @@ class PlaceService
         $places = Location::where("prefecture","like",'%'. $prefecture .'%')->get();
         return $places;
     }
+
+    public function updateDisplayTop($id, $displayTop){
+        $place = Location::where('api_id','=',$id)->get()->first();
+        $place->display_top = $displayTop;
+        $place->save();
+    }
 }
