@@ -1,5 +1,11 @@
 
+@font-face{
+    font-family: iroha-extralight;
+    src:url("public/fonts/irohakakuC-ExtraLight.ttf")format("truetype");
+}
+
 .block{
     display: grid;
     gap: 64px;
+    font-family: iroha-extralight;
 }
