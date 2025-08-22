@@ -31,7 +31,6 @@ class PlaceService
     public function getPrefectureFromPost($postNum){
         $res = Http::get("https://zipcloud.ibsnet.co.jp/api/search?zipcode=". $postNum);
         $res = $res->json();
-        dump($res);
         $prefecture = $res["results"][0]["address1"];
         return $prefecture;
     }

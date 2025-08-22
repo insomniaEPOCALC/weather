@@ -19,7 +19,6 @@ class WeatherController extends Controller
         $display = $this->locations->getLocationDisplayFromApiId($place);
         $id = $place;
         $res = $res->json();
-        dump( $res );
         $city = $res["location"]["city"];
         $data = $res["forecasts"][0];
         $temperature = $data["temperature"]["max"]["celsius"]; //気温はnullになることがあるので注意
