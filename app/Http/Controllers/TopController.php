@@ -14,13 +14,14 @@ class TopController extends Controller
         return view('forecasts.top', compact('places'));
     }
 
-    public function check($id){
+    public function changeDisplayTop($id){
         $location = $this->locations->getLocationFromApiId( $id );
         $display = $location->display_top;
-        if($display == 1){
-
+        if($display == 0){
+            $this->locations->updateDisplayTop($id, 1);
         }else{
-
+            $this->locations->updateDisplayTop($id, 0);
         }
+        return back();
     }
 }

@@ -12,4 +12,4 @@ Route::get('/top', [TopController::class, 'index']);
 
 Route::get('/search', [WeatherController::class,'searchLocation']);
 
-Route::get('/wether/{id}', [TopController::class,'check']);
+Route::get('/change/{id}', [TopController::class,'changeDisplayTop']);

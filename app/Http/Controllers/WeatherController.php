@@ -17,6 +17,7 @@ class WeatherController extends Controller
     public function weather($place){
         $res = Http::get("https://weather.tsukumijima.net/api/forecast/city/". $place);
         $display = $this->locations->getLocationDisplayFromApiId($place);
+        $id = $place;
         $res = $res->json();
         dump( $res );
         $city = $res["location"]["city"];
@@ -31,7 +32,7 @@ class WeatherController extends Controller
         $img = $data["image"]["url"];
         $about = $res["description"]["bodyText"];
         $about = nl2br($about);
-        return view('forecasts.weather' , compact('date','weather','img','about','temperature','city','display'));
+        return view('forecasts.weather' , compact('date','weather','img','about','temperature','city','display', 'id'));
     }
 
     public function searchLocation(Request $request){

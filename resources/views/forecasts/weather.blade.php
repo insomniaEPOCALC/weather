@@ -16,11 +16,13 @@
     <div class='about'>{!!$about!!}</div>
 
     <div>
-        @if ($display == 1)
-            <a>トップページから非表示にする</a>
-        @else
-            <a>トップページに表示する</a>
-        @endif
+        <a href='change/'.{{ $id }}>
+            @if ($display == 1)
+                トップページから非表示にする
+            @else
+                トップページに表示する
+            @endif
+        </a>
     </div>
 
     <a href='/top' class='back'>back</a>
