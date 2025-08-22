@@ -9,7 +9,7 @@
     <div class='text-center'>
 
         @foreach($places as $place)
-            <a href="weather/{{ $place->api_id }}">{{ $place->name }}</a>
+            <x-button :place="$place" />
         @endforeach
     </div>
 
