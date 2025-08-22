@@ -11,5 +11,10 @@
 .block{
     display: grid;
     gap: 64px;
-    font-family: iroha-extralight, iroha-light;
+    font-family: iroha-light;
+}
+
+.body{
+    background-color: #d8e9f0;
+    color: #16160e;
 }

@@ -10,7 +10,7 @@
 
     <head>
 
-    <body class=' flex items-center justify-center'>
+    <body class=' flex items-center justify-center body'>
         <div class='block'>
             @yield('content')
         </div>
