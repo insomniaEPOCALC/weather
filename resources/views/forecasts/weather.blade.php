@@ -16,7 +16,7 @@
     <div class='about'>{!!$about!!}</div>
 
     <div>
-        <a href='change/'.{{ $id }}>
+        <a href='change/{{ $id }}'>
             @if ($display == 1)
                 トップページから非表示にする
             @else

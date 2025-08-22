@@ -44,6 +44,7 @@ class PlaceService
     public function updateDisplayTop($id, $displayTop){
         $place = Location::where('api_id','=',$id)->get()->first();
         $place->display_top = $displayTop;
+        $place->timestamps = false;
         $place->save();
     }
 }
