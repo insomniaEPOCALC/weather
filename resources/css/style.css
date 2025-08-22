@@ -1,7 +1,7 @@
 
 @font-face{
     font-family: iroha-extralight;
-    src:url("public/fonts/irohakakuC-ExtraLight.ttf")format("truetype");
+    src:url("../fonts/irohakakuC-ExtraLight.ttf")format("truetype");
 }
 
 .block{
