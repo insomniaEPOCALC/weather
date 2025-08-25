@@ -31,9 +31,25 @@ class WeatherController extends Controller
         $date = Carbon::parse($date)->format('Y年m月d日');
         $weather = $data["telop"];
         $img = $data["image"]["url"];
+        $imgFile = basename($img);
+        $imgNum = pathinfo($imgFile, PATHINFO_FILENAME);
         $about = $res["description"]["bodyText"];
         $about = nl2br($about);
-        return view('forecasts.weather' , compact('date','weather','img','about','temperature','city','display', 'id'));
+        $info = '';
+
+        if($imgNum <200){
+            $info = 'sunny';
+        }elseif($imgNum <300 ){
+            $info = 'cloudy';
+        }elseif($imgNum < 400){
+            $info = 'rainy';
+        }elseif($imgNum < 500){
+            $info = 'snowy';
+        }else{
+            $info = 'sunnyNight';
+        }
+
+        return view('forecasts.weather' , compact('date','weather','img','about','temperature','city','display', 'id','info'));
     }
 
     public function searchLocation(Request $request){
@@ -46,6 +62,13 @@ class WeatherController extends Controller
         $query = $request->input('query');
         $prefecture = $this->locations->getPrefectureFromPost($query);
         $places = $this->locations->searchLocations($prefecture);
+        if(isset($places->name)){
+            $res = Http::get('http://api.open-notify.org/iss-now.json');
+            $res = $res->json();
+            $longitude = $res['iss_position']['longitude'];
+            $latitude = $res['iss_position']['latitude'];
+            return view('forecasts.search', compact('places','longitude','latitude'));
+        }
         return view('forecasts.search', compact('places','prefecture'));
     }
 

@@ -7,6 +7,7 @@
 @endsection
 
 @section('content')
+
     <div class='block-inner'>
         <h1>{{$city}}の天気</h1>
         <h2>{{$date}}</h2>
@@ -24,7 +25,7 @@
             @if ($display == 1)
                 この場所をトップページに表示しない
             @else
-                この場所トップページに表示する
+                この場所をトップページに表示する
             @endif
         </a>
     </div>
@@ -32,6 +33,6 @@
     <div class='about'>{!!$about!!}</div>
     </div>
 
-    <a href='/top' class='back'>back</a>
+    <a href='/top' class='back'>戻る</a>
 
 @endsection
