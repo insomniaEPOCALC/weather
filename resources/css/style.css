@@ -8,6 +8,13 @@
     src:url("../fonts/irohakakuC-Light.ttf")format("truetype");
 }
 
+
+
+
+h2{
+    font-size: large;
+}
+
 .block{
     display: grid;
     gap: 64px;
@@ -17,4 +24,9 @@
 .body{
     background-color: #d8e9f0;
     color: #16160e;
+}
+
+.block-inner{
+    display: grid;
+    gap: 24px;
 }
