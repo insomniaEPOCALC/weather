@@ -8,7 +8,7 @@
     @yield('style')
     @yield('script')
 
-    <head>
+</head>
 
     <body class=' flex items-center justify-center body'>
         <div class='block'>

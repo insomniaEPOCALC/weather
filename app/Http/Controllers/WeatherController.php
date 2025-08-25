@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use App\Services\PlaceService;
+use Carbon\Carbon;
 
 class WeatherController extends Controller
 {
@@ -27,6 +28,7 @@ class WeatherController extends Controller
             $temperature = $data["temperature"]["max"]["celsius"];
         }
         $date = $data["date"];
+        $date = Carbon::parse($date)->format('Y年m月d日');
         $weather = $data["telop"];
         $img = $data["image"]["url"];
         $about = $res["description"]["bodyText"];

@@ -8,11 +8,17 @@
     src:url("../fonts/irohakakuC-Light.ttf")format("truetype");
 }
 
-
+h1{
+    font-size: 56px;
+    display: flex;
+    justify-content: center;
+}
 
 
 h2{
-    font-size: large;
+    font-size: 28px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .block{
