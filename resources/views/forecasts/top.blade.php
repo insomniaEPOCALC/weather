@@ -9,7 +9,6 @@
     <div class='block-inner'>
         <h2>地点を選択</h2>
         <div class='text-center'>
-
             @foreach($places as $place)
                 <x-button :place="$place" />
             @endforeach

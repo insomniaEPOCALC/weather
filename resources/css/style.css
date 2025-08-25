@@ -73,6 +73,16 @@ h2 {
     padding: 10px; /* 内側の余白 */
 }
 
-.display{
+.display {
     font-size: small;
+}
+
+.back::before {
+    content: "";
+    display: inline-block;
+    background-image: url("https://iconbox.fun/wp/wp-content/uploads/arrow_left_24.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 12px;
 }
