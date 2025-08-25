@@ -2,10 +2,15 @@
 
 @section('title', $city . 'の天気')
 
-@section('content')
+@section('icon')
+<link rel="shortcut icon" href={{$img}}>
+@endsection
 
-    <h1>{{$city}}の天気</h1>
-    <h2>{{$date}}</h2>
+@section('content')
+    <div class='block-inner'>
+        <h1>{{$city}}の天気</h1>
+        <h2>{{$date}}</h2>
+    </div>
     <div class='weather'>{{$weather}}</div>
     @if ($temperature != null)
         <div class='temperature'>
@@ -13,16 +18,18 @@
             <p>{{$temperature}}度</p>
         </div>
     @endif
-    <div class='about'>{!!$about!!}</div>
 
-    <div>
+        <div class="display">
         <a href='change/{{ $id }}'>
             @if ($display == 1)
-                トップページから非表示にする
+                この場所をトップページに表示しない
             @else
-                トップページに表示する
+                この場所トップページに表示する
             @endif
         </a>
+    </div>
+    <div class='box'>
+    <div class='about'>{!!$about!!}</div>
     </div>
 
     <a href='/top' class='back'>back</a>

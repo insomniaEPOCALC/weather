@@ -1,38 +1,78 @@
-
-@font-face{
+@font-face {
     font-family: iroha-extralight;
-    src:url("../fonts/irohakakuC-ExtraLight.ttf")format("truetype");
+    src: url("../fonts/irohakakuC-ExtraLight.ttf") format("truetype");
 }
-@font-face{
+@font-face {
     font-family: iroha-light;
-    src:url("../fonts/irohakakuC-Light.ttf")format("truetype");
+    src: url("../fonts/irohakakuC-Light.ttf") format("truetype");
+}
+@font-face {
+    font-family: iroha-Regular;
+    src: url("../fonts/irohakakuC-Regular.ttf") format("truetype");
 }
 
-h1{
+h1 {
     font-size: 56px;
     display: flex;
     justify-content: center;
+    font-family: iroha-Regular;
 }
 
-
-h2{
+h2 {
     font-size: 28px;
     display: flex;
     justify-content: space-around;
 }
 
-.block{
+.block {
     display: grid;
     gap: 64px;
     font-family: iroha-light;
 }
 
-.body{
+.body {
     background-color: #d8e9f0;
     color: #16160e;
 }
 
-.block-inner{
+.block-inner {
     display: grid;
     gap: 24px;
+    font-size: 18px;
+    justify-content: center;
+    font-family: iroha-light;
+}
+
+.weather {
+    font-size: 56px;
+    display: flex;
+    justify-content: center;
+    font-family: iroha-light;
+}
+
+.temperature {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    font-family: iroha-extralight;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    font-family: iroha-extralight;
+}
+
+.box {
+    background-color: #e3edf2;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    border: 1px solid black;
+    padding: 10px; /* 内側の余白 */
+}
+
+.display{
+    font-size: small;
 }

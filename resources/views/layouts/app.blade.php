@@ -6,6 +6,7 @@
     <title>@yield('title')</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @yield('style')
+    @yield('icon')
     @yield('script')
 
 </head>
