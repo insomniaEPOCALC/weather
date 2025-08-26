@@ -11,6 +11,7 @@
     <div class='block-inner'>
         <h1>{{$city}}の天気</h1>
         <h2>{{$date}}</h2>
+        <p><img src="{{ $icon }}" ></p>
     </div>
     <div class='weather'>{{$weather}}</div>
     @if ($temperature != null)

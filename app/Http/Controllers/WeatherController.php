@@ -49,7 +49,9 @@ class WeatherController extends Controller
             $info = 'sunnyNight';
         }
 
-        return view('forecasts.weather' , compact('date','weather','img','about','temperature','city','display', 'id','info'));
+        $icon = $this->getIconFromInfo($info);
+
+        return view('forecasts.weather' , compact('date','weather','img','about','temperature','city','display', 'id','info','icon'));
     }
 
     public function searchLocation(Request $request){
@@ -70,6 +72,23 @@ class WeatherController extends Controller
             return view('forecasts.search', compact('places','longitude','latitude'));
         }
         return view('forecasts.search', compact('places','prefecture'));
+    }
+
+    public function getIconFromInfo($info){
+        switch ($info){
+            case 'sunny':
+                return asset('img/sunny.svg');
+            case 'cloudy':
+                return asset('img/cloudy.svg');
+            case 'rainy':
+                return asset('img/rainy.svg');
+            case 'snowy':
+                return asset('img/snowy.svg');
+            case 'night':
+                return asset('img/night.svg');
+            default:
+                return null;
+        }
     }
 
 

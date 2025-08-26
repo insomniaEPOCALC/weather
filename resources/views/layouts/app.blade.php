@@ -43,7 +43,7 @@
         </body>
     @endif
 @else
-    <body class=' flex items-center justify-center body'>
+    <body class=' flex items-center justify-center body' id = 'cloud'>
         <div class='block'>
             @yield('content')
         </div>
