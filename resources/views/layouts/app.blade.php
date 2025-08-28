@@ -11,13 +11,13 @@
 
 </head>
 @if(isset($info))
-    @if($info === 'sunny')
+    @if($info === 'sunny'|| $info === 'sunnyCloudy')
         <body class=' flex items-center justify-center body sunny'>
             <div class='block'>
                 @yield('content')
             </div>
         </body>
-    @elseif ($info === 'rainy')
+    @elseif ($info === 'rainy' || $info === 'sunnyRainy' || $info === 'cloudyRainy' || $info === 'storm')
         <body class=' flex items-center justify-center body rainy'>
             <div class='block'>
                 @yield('content')
