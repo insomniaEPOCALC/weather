@@ -2,6 +2,10 @@
 
 @section('title', '検索結果')
 
+@section('icon')
+    <link rel="shortcut icon" href="img/sunny.svg">
+@endsection
+
 @section('content')
 @if(!isset($places->name))
     <h1>{{ $prefecture }}の地域一覧</h1>
@@ -20,7 +24,7 @@
         <h2>経度:{{ $latitude }}</h2>
     </div>
     <div class='block-inner'>
-        <p>存在しない郵便番号です</p>
+        <p>その入力情報は存在しません</p>
     </div>
 
 @endif
