@@ -1,0 +1,182 @@
+@font-face {
+    font-family: iroha-extralight;
+    src: url("../fonts/irohakakuC-ExtraLight.ttf") format("truetype");
+}
+@font-face {
+    font-family: iroha-light;
+    src: url("../fonts/irohakakuC-Light.ttf") format("truetype");
+}
+@font-face {
+    font-family: iroha-Regular;
+    src: url("../fonts/irohakakuC-Regular.ttf") format("truetype");
+}
+
+h1 {
+    font-size: 56px;
+    display: flex;
+    justify-content: center;
+    font-family: iroha-Regular;
+}
+
+h2 {
+    font-size: 28px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.block {
+    display: grid;
+    gap: 64px;
+    font-family: iroha-light;
+}
+
+.body {
+    background-color: #d8e9f0;
+    color: #16160e;
+}
+
+.sunny {
+    background-color: #d8e9f0;
+}
+
+.cloudy {
+    background-color: #fffffc;
+}
+
+.rainy {
+    background-color: #bbc8e6;
+}
+
+.snowy {
+    background-color: #f7fcfe;
+}
+.night {
+    background-color: #8892c2;
+}
+
+.block-inner {
+    display: grid;
+    gap: 24px;
+    font-size: 18px;
+    justify-content: center;
+    font-family: iroha-light;
+    h3 {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    }
+}
+
+.weather {
+    font-size: 56px;
+    display: flex;
+    justify-content: center;
+    font-family: iroha-light;
+}
+
+.temperature {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    font-family: iroha-extralight;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    font-family: iroha-extralight;
+}
+
+.box {
+    background-color: #eaf4fc;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin: 20px;
+}
+
+.advice{
+    margin:10px
+}
+
+
+.display {
+    font-size: small;
+}
+
+.back::before {
+    content: "";
+    display: inline-block;
+    background-image: url("https://iconbox.fun/wp/wp-content/uploads/arrow_left_24.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 12px;
+}
+
+.weather-ticker-container {
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+    position: relative;
+}
+
+.weather-ticker {
+    display: flex;
+    width: 100%;
+}
+
+.ticker-content {
+    display: flex;
+    align-items: center;
+    animation: scroll-left 30s linear infinite;
+    padding-left: 100%;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.weather-item {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 20px;
+    font-weight: 500;
+}
+
+.city {
+    margin-right: 5px;
+}
+
+.separator {
+    margin-right: 20px;
+}
+
+.weather-ticker-container:hover .ticker-content {
+    animation-play-state: paused;
+}
+
+
+.tomorrow{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    h2{
+        font-size: 16px;
+        display: flex;
+        justify-content: space-around;
+    }
+    img{
+        height: 20px;
+        width: 20px;
+    }
+}
